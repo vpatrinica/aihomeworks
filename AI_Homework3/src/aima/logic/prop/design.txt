@@ -1,0 +1,6 @@
+The PEParser class is an LL(k) recursive descent parser which creates an Abstract Syntax Tree for any propositional logic expression.
+Parantheses ARE importantfor this version of the parser. 
+Each Node of the tree is a nonterminal from the grammar for Propositional Logic (fig 7.7 in AIMA 2nd edition).
+For any operation that involves traversing the tree, there is a "Visitor" class,
+which traverses the tree (eg: the CNFTransformer class );
+(see "The visitor Design Pattern" in Design Paterns by Gamma et al for details ).
