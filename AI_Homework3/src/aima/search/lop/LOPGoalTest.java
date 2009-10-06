@@ -1,6 +1,7 @@
 package aima.search.lop;
 
-import java.util.List; 
+//import java.util.List; 
+import aima.search.lop.StateLOP;
 
 import aima.search.framework.GoalTest;
 
@@ -12,9 +13,17 @@ public class LOPGoalTest implements GoalTest
 
 	public boolean isGoalState(Object state)
 	{
-		List currentRating = (List) state;
-		
-		return (currentRating.size() == nLen);
+		StateLOP currentRating = (StateLOP) state;
+		if (currentRating.list.length == nLen)
+			{
+			System.out.println("Solution state:");
+			for (int index = 0; index < currentRating.list.length; index++)
+			{
+				System.out.print(currentRating.list[index]);
+			}
+			System.out.println("\n");
+			}
+		return (currentRating.list.length == nLen);
 	}
 
 }

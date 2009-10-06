@@ -1,9 +1,9 @@
 package aima.search.lop;
-
+import aima.search.lop.StateLOP;
 
 import aima.search.framework.HeuristicFunction;
 
-import java.util.List;
+//import java.util.List;
 
 public class LOPHeuristicFunction implements HeuristicFunction {
 	
@@ -11,8 +11,8 @@ public class LOPHeuristicFunction implements HeuristicFunction {
 	public int minDist = 10;
 
 	public int getHeuristicValue(Object state) {
-		List currentNode = (List) state;
-		return (nLen - currentNode.size())*minDist;
+		StateLOP currentNode = (StateLOP) state;
+		return (nLen - currentNode.list.length)*minDist;
 
 	}
 

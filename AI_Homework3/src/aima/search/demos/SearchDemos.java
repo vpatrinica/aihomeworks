@@ -10,9 +10,10 @@ package aima.search.demos;
  */
 public class SearchDemos {
 	public static void main(String[] args){
-		NQueensDemo.main(null);
-		EightPuzzleDemo.main(null);
-		CSPDemo.main(null);
+		LOPDemo.main(null);
+		//NQueensDemo.main(null);
+		//EightPuzzleDemo.main(null);
+		//CSPDemo.main(null);
 	}
 
 }
