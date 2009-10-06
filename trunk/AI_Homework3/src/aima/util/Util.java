@@ -1,7 +1,4 @@
-/*
- * Created on Aug 24, 2003 by Ravi Mohan
- *  
- */
+
 package aima.util;
 
 import java.util.ArrayList;

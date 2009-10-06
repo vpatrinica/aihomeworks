@@ -14,7 +14,7 @@ public class StateLOP {
 	public StateLOP(int[] lst, int k){
 		
 		index = k;	
-		list = lst.clone();
+		list = (int [])lst.clone();
 		
 	}
 	public StateLOP(){

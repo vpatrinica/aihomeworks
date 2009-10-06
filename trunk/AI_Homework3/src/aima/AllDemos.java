@@ -10,7 +10,7 @@ import aima.search.demos.SearchDemos;
 public class AllDemos {
 	public static void main(String[] args) {
 		SearchDemos.main(null);
-		LogicDemo.main(null);
+		//LogicDemo.main(null);
 	}
 
 }

@@ -14,9 +14,10 @@ import aima.search.lop.LOPSuccessorFunction;
 import aima.search.lop.LOPGoalTest;
 import aima.search.lop.LOPHeuristicFunction;
 import aima.search.lop.StateLOP;
+import aima.search.lop.LOPStepCostFunction;
 
 
-public class LinearOrderingProblemDemo {
+public class LOPDemo {
 	
 	public static void main(String[] args) {
 
@@ -37,10 +38,11 @@ public class LinearOrderingProblemDemo {
 		System.out.println("\nLinear Ordering Demo AStar Search -->");
 		try
 		{
-			StateLOP initialState = new StateLOP(new int []{}, 0);
+			StateLOP initialState = new StateLOP(new int[] {1}, 1);
 			Problem problem = new Problem(initialState,
 					new LOPSuccessorFunction(),
 					new LOPGoalTest(),
+					new LOPStepCostFunction(),
 					new LOPHeuristicFunction());
 			Search search = new AStarSearch(new GraphSearch());
 			SearchAgent agent = new SearchAgent(problem, search);
