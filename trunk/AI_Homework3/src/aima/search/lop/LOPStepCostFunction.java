@@ -18,7 +18,7 @@ public class LOPStepCostFunction implements StepCostFunction
 		{
 			StateLOP currentSt = (StateLOP) fromState;
 			
-			if (currentSt.list.length == 0.0) return Double.valueOf(0.0);
+			if (currentSt.list.size() == 0) return Double.valueOf(0.0);
 			StateLOP nextSt = (StateLOP) toState;
 			System.out.println("Cost between: "+ (currentSt.index-1) + " to " + (nextSt.index-1) + " = " + A[currentSt.index -1 ][nextSt.index -1] + "\n");
 			

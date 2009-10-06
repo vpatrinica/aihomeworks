@@ -12,7 +12,7 @@ public class LOPHeuristicFunction implements HeuristicFunction {
 
 	public int getHeuristicValue(Object state) {
 		StateLOP currentNode = (StateLOP) state;
-		return (nLen - currentNode.list.length)*minDist;
+		return (nLen - currentNode.list.size())*minDist;
 
 	}
 
