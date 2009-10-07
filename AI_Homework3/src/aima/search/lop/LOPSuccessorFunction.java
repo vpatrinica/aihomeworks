@@ -33,13 +33,16 @@ public class LOPSuccessorFunction implements SuccessorFunction {
 		System.out.println("Successors of : " + currentSt.index + ":\n");
 		List successors = new ArrayList();
 		
-		int [] Mylist = new int [] {1, 2, 3, 4, 5};
+		int [] Mylist = new int[currentSt.nLen];
+		for(int min = 0; min < currentSt.nLen; min ++){
+			Mylist[min] = min + 1;
+		}
 		
 		for (index = 0; index < currentSt.list.length; index++)
 		{
 			Mylist[currentSt.list[index] - 1] = 0;
 		}
-		for (index = 0; index < 5; index++)
+		for (index = 0; index < currentSt.nLen; index++)
 		{
 			
 			if (Mylist[index] != 0)
