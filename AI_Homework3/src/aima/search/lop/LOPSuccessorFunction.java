@@ -44,7 +44,7 @@ public class LOPSuccessorFunction implements SuccessorFunction {
 			
 			if (Mylist[index] != 0)
 			{
-				StateLOP nextSt = new StateLOP(tempArray, Mylist[index]);
+				StateLOP nextSt = new StateLOP(tempArray, Mylist[index], currentSt.A, currentSt.nLen, currentSt.minDist);
 						
 				nextSt.list[currentSt.list.length] = Mylist[index];
 				System.out.print(Mylist[index]);

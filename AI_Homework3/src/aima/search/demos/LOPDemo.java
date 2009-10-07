@@ -39,17 +39,60 @@ public class LOPDemo {
 		System.out.println("\nLinear Ordering Demo AStar Search -->");
 		try
 		{
-			int [] initialPoint = new int [] {1};
-			StateLOP initialState = new StateLOP(initialPoint, 1);
-			Problem problem = new Problem(initialState,
-					new LOPSuccessorFunction(),
-					new LOPGoalTest(),
-					new LOPStepCostFunction(),
-					new LOPHeuristicFunction());
-			Search search = new AStarSearch(new GraphSearch());
-			SearchAgent agent = new SearchAgent(problem, search);
-			printActions(agent.getActions());
-			printInstrumentation(agent.getInstrumentation());
+			
+			int i;
+			StateLOP generator = new StateLOP();
+			int maxCost = 0;
+			int [] maxSolution = new int [generator.nLen];
+			for (i = 1; i<=generator.nLen; i++)
+			{
+				
+			
+				int [] initialPoint = new int [] {i};
+				StateLOP initialState = new StateLOP(initialPoint, i, generator.A, generator.nLen, generator.minDist);
+				Problem problem = new Problem(initialState,
+						new LOPSuccessorFunction(),
+						new LOPGoalTest(),
+						new LOPStepCostFunction(),
+						new LOPHeuristicFunction());
+				Search search = new AStarSearch(new GraphSearch());
+				SearchAgent agent = new SearchAgent(problem, search);
+				System.out.println("The cool cost: "+ initialState.cost);
+				
+				int index, jndex;
+				int tempCost = 0;
+				int [] tempArray = new int[generator.nLen];
+				tempArray[0] = i;
+				List tempList = agent.getActions();
+				for (index = 0; index<tempList.size(); index++ )
+					tempArray[index+1] = (int) Integer.valueOf(tempList.get(index).toString());
+				
+				for (index = (tempArray.length-1); index>0; index--)
+				{
+					//System.out.println(index);
+					//System.out.println("Calculating for node: " + list[index]);
+					//System.out.println("the \"neighbours are\":");
+					for (jndex = index-1; jndex>=0; jndex--){
+						//System.out.println("Adding cost from node :" + list[index] + " to node " + list[jndex] + " = "+ A[list[index]-1][list[jndex] -1]);
+					    tempCost+=generator.A[tempArray[index]-1][tempArray[jndex] -1];
+					}
+				}
+				
+				if (maxCost< tempCost)
+				{
+					maxCost = tempCost;
+					maxSolution = tempArray.clone();
+				}
+				
+			
+			}
+			
+			System.out.println("The fucking best cost is : "+ maxCost);
+			System.out.println("The ultimate solution:");
+			for (i = (maxSolution.length - 1); i>=0; i--)
+				System.out.print(maxSolution[i]);
+			System.out.println();
+			
 		}
 		catch (Exception e)
 		{
