@@ -14,16 +14,18 @@ public class LOPGoalTest implements GoalTest
 	public boolean isGoalState(Object state)
 	{
 		StateLOP currentRating = (StateLOP) state;
-		if (currentRating.list.size() == nLen)
+		if (currentRating.list.length == nLen)
 			{
 			System.out.println("Solution state:");
-			for (int index = 0; index < currentRating.list.size(); index++)
+			for (int index = 0; index < currentRating.list.length; index++)
 			{
-				System.out.print(currentRating.list.get(index));
+				System.out.print(currentRating.list[index]);
 			}
 			System.out.println("\n");
+			currentRating.getCost();
+			System.out.println("The solution cost is: " + currentRating.cost + " \n");
 			}
-		return (currentRating.list.size() == nLen);
+		return (currentRating.list.length == nLen);
 	}
 
 }
