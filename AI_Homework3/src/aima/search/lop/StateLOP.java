@@ -40,7 +40,7 @@ public class StateLOP {
 				if(i == j){
 					A[i][j] = 0;
 			}else{
-					A[i][j] = gen.nextInt(nParticipants - 2) + 1;  
+					A[i][j] = gen.nextInt(nParticipants - 2*minDist) + minDist;  
 					A[j][i] = nParticipants - A[i][j]; 
 						
 				}
