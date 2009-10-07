@@ -26,21 +26,21 @@ public class LOPDemo {
 	
 	}
 
-	private static void newLinearOrderingProblem()
+	public static void newLinearOrderingProblem()
 	{
 
 		nLOPAStar();
 	}
 	
-	private static void nLOPAStar() 
+	public static void nLOPAStar() 
 	{
 		
 	
 		System.out.println("\nLinear Ordering Demo AStar Search -->");
 		try
 		{
-	
-			StateLOP initialState = new StateLOP(new int [] {1}, 1, 0);
+			int [] initialPoint = new int [] {1};
+			StateLOP initialState = new StateLOP(initialPoint, 1);
 			Problem problem = new Problem(initialState,
 					new LOPSuccessorFunction(),
 					new LOPGoalTest(),
