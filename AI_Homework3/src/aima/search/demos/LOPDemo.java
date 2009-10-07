@@ -65,7 +65,7 @@ public class LOPDemo {
 				tempArray[0] = i;
 				List tempList = agent.getActions();
 				for (index = 0; index<tempList.size(); index++ )
-					tempArray[index+1] = (int) Integer.valueOf(tempList.get(index).toString());
+					tempArray[index+1] = Integer.valueOf(tempList.get(index).toString()).intValue();
 				
 				for (index = (tempArray.length-1); index>0; index--)
 				{
@@ -81,7 +81,7 @@ public class LOPDemo {
 				if (maxCost< tempCost)
 				{
 					maxCost = tempCost;
-					maxSolution = tempArray.clone();
+					maxSolution = (int [])tempArray.clone();
 				}
 				
 			

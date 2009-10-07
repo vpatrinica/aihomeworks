@@ -17,13 +17,13 @@ public class LOPGoalTest implements GoalTest
 		if (currentRating.list.length == currentRating.nLen)
 			{
 			System.out.println("Solution state:");
-			for (int index = 0; index < currentRating.list.length; index++)
-			{
-				System.out.print(currentRating.list[index]);
-			}
-			System.out.println("\n");
+			//for (int index = 0; index < currentRating.list.length; index++)
+			//{
+				//System.out.print(currentRating.list[index]);
+			//}
+			//System.out.println("\n");
 			currentRating.getCost();
-			System.out.println("The solution cost is: " + currentRating.cost + " \n");
+			//System.out.println("The solution cost is: " + currentRating.cost + " \n");
 			
 			}
 		return (currentRating.list.length == currentRating.nLen);
