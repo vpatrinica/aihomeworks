@@ -28,8 +28,8 @@ public class StateLOP {
 	public void generateMatrix()
 	{
 		//A = new int [] [] {{0, 16, 15, 12, 5}, {14, 0, 4, 16, 1}, {15, 26, 0, 19, 2}, {18, 14, 11, 0, 12}, {25, 29, 28, 18, 0}};
-		nLen = 5;
-		minDist = 10;
+		nLen = 8;
+		minDist = 1;
 		nParticipants = 30;
 				
 		Random gen = new Random();
@@ -39,8 +39,8 @@ public class StateLOP {
 			for(int j = 0; j <= i; j++){
 				if(i == j){
 					A[i][j] = 0;
-				}else{
-					A[i][j] = gen.nextInt(nParticipants - 9) + 10;  
+			}else{
+					A[i][j] = gen.nextInt(nParticipants - 2) + 1;  
 					A[j][i] = nParticipants - A[i][j]; 
 						
 				}
