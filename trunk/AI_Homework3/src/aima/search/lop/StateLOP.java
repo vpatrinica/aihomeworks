@@ -28,7 +28,7 @@ public class StateLOP {
 	public void generateMatrix()
 	{
 		//A = new int [] [] {{0, 16, 15, 12, 5}, {14, 0, 4, 16, 1}, {15, 26, 0, 19, 2}, {18, 14, 11, 0, 12}, {25, 29, 28, 18, 0}};
-		nLen = 8;
+		nLen = 7;
 		minDist = 1;
 		nParticipants = 30;
 				
@@ -45,7 +45,7 @@ public class StateLOP {
 						
 				}
 			}
-		}	
+		}
 		System.out.println("The Matrix is: ");
 		for(int k = 0; k < nLen; k++){
 			for(int l = 0; l < nLen; l++){
