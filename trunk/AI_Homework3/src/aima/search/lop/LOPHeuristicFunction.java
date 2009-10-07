@@ -7,12 +7,12 @@ import aima.search.framework.HeuristicFunction;
 
 public class LOPHeuristicFunction implements HeuristicFunction {
 	
-	public int nLen = 5;
-	public int minDist = 10;
+	
+
 
 	public int getHeuristicValue(Object state) {
 		StateLOP currentNode = (StateLOP) state;
-		return (nLen - currentNode.list.length)*minDist;
+		return (currentNode.nLen - currentNode.list.length)*currentNode.minDist;
 
 	}
 
