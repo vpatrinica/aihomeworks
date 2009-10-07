@@ -40,7 +40,7 @@ public class StateLOP {
 				if(i == j){
 					A[i][j] = 0;
 				}else{
-					A[i][j] = gen.nextInt(nParticipants + 1);  
+					A[i][j] = gen.nextInt(nParticipants - 9) + 10;  
 					A[j][i] = nParticipants - A[i][j]; 
 						
 				}
@@ -65,7 +65,6 @@ public class StateLOP {
 
 	public void getCost()
 	{
-		int nLen = 5;
 		int index, jndex;
 		
 		for (index = (list.length-1); index>0; index--)
