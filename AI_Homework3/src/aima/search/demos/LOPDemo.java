@@ -2,6 +2,7 @@ package aima.search.demos;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Properties;
 
 
@@ -38,7 +39,9 @@ public class LOPDemo {
 		System.out.println("\nLinear Ordering Demo AStar Search -->");
 		try
 		{
-			StateLOP initialState = new StateLOP(new int[] {1}, 1);
+			List myInitialState = new ArrayList();
+			myInitialState.add("1");
+			StateLOP initialState = new StateLOP(myInitialState, 1, 0);
 			Problem problem = new Problem(initialState,
 					new LOPSuccessorFunction(),
 					new LOPGoalTest(),

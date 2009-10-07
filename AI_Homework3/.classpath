@@ -3,5 +3,6 @@
 	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6" exported="true" kind="con"/>
 	<classpathentry path="src" kind="src"/>
 	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"/>
+	<classpathentry path="E:/Eclipse/eclipse/junit4.7/junit4.7/junit-4.7.jar" kind="lib"/>
 	<classpathentry path="bin" kind="output"/>
 </classpath>
